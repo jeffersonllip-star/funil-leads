@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Funil de Leads</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#121212;
+color:#e4e4e4;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:500px;
+margin:auto;
+background:#1e1e1e;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+h2{
+text-align:center;
+margin-bottom:25px;
+color:#ffffff;
+}
+
+label{
+font-weight:bold;
+font-size:14px;
+}
+
+input, select, textarea{
+
+width:100%;
+box-sizing:border-box;
+
+padding:12px;
+
+margin-top:6px;
+margin-bottom:18px;
+
+background:#2a2a2a;
+border:1px solid #444;
+
+border-radius:6px;
+
+color:white;
+font-size:14px;
+
+}
+
+textarea{
+resize:none;
+}
+
+button{
+
+background:#4CAF50;
+color:white;
+
+border:none;
+
+padding:16px;
+
+width:100%;
+
+font-size:16px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+button:hover{
+
+background:#3d9442;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Atualização do Funil</h2>
+
+<label>Gerente Comercial</label>
+
+<select id="gerente">
+
+<option>Jessica Dilkin</option>
+<option>Ricardo Medina</option>
+<option>Rodrigo Gardinal</option>
+<option>Tais Fauro</option>
+
+</select>
+
+<label>Nome do Lead</label>
+
+<input list="listaLeads" id="lead" placeholder="Digite ou selecione o lead">
+
+<datalist id="listaLeads">
+
+<option value="ABACAXI QUEBRADO">
+<option value="ACP">
+<option value="ADEMAR DE TOLEDO">
+<option value="ADILSON ANTONIO COELHO">
+<option value="ADILSON LEVINDO PEREIRA">
+<option value="ADIMAX">
+<option value="ADM">
+<option value="AFB">
+<option value="AGENER">
+<option value="AGILITY">
+<option value="AGILITY ">
+<option value="AGRARIA COOP.">
+<option value="AGRIFIRM">
+<option value="AGRINDUS">
+<option value="AGRO BELLA ">
+<option value="AGRO JATAI">
+<option value="AGRO LEO">
+<option value="AGROARAÇA">
+<option value="AGROCAVE">
+<option value="AGROCERES">
+<option value="AGROFAVA">
+<option value="AGROJEM">
+<option value="AGROMIX">
+<option value="AGRONELLI AGROINDUSTRIA LTDA">
+<option value="AGRONORTENA">
+<option value="AGRONUTRI/ PRADO">
+<option value="AGROPAN">
+<option value="AGROPANTANAL">
+<option value="AGROPASTORIL CAMPANELLI">
+<option value="AGROPECUÁRIA 3I">
+<option value="AGROPECUÁRIA CÓ RREGOS">
+<option value="AGROPECUÁRIA GATO DO MATO LTDA">
+<option value="AGROPECUÁRIA MARAJOARS">
+<option value="AGROPECUARIA REX LTDA">
+<option value="AGROPECUÁRIA SEIBT">
+<option value="AGROPECUARIA SETE COPAS">
+<option value="AGROQUIMA">
+<option value="AGROVALE ">
+<option value="AGROVIDA">
+<option value="AGROZACCA">
+<option value="AIRTON RIBEIRO - SÃO PEDRO">
+<option value="AIRTON RIBEIRO - TAQUARA">
+<option value="ALBERTO PEDRO VAN DE BROEK">
+<option value="ALBERTUS FREDERIK WOLTERS">
+<option value="ALCIDES BRUNETTA">
+<option value="ALCON">
+<option value="ALESSANDRO CHIOGNA">
+<option value="ALESSANDRO LONGHI">
+<option value="ALESSANDRO VIOL">
+<option value="ALFA COOP">
+<option value="ALGOMIX">
+<option value="ALIBEN">
+<option value="ALINUTRI">
+<option value="ALPHA ">
+<option value="ALVARO FURTADO DE ANDRADE">
+<option value="ALVARO LACERDA">
+<option value="AMAURI PINTO COSTA">
+<option value="AMERICAN PETFOODS">
+<option value="ANA CLAUDIA CESTARI">
+<option value="ANA ELISABETE NASCIMENTO TONON">
+<option value="ANDREALAN  NUTRIÇÃO ANIMAL ">
+<option value="ANIMALL">
+<option value="ANSWER">
+<option value="ANTONIO ALCINDO LEME">
+<option value="ANTONIO APARECIDO BACOCHINA">
+<option value="ANTONIO CAPOBIANCO">
+<option value="ANTONIO CARLOS DA SILVA">
+<option value="ANTONIO CARLOS PEREIRA, FILHOS E NETOS">
+<option value="ANTONIO DA SILVA LEME">
+<option value="ANTONIO EDUARDO TIRAPELI">
+<option value="ANTÓNIO JOSÉ FREIRE">
+<option value="ARENO EDUARDO MARTINS PARREIRA">
+<option value="ARGEPASI">
+<option value="ARMANDO, FLÁVIO E KARINA CARVALHO">
+<option value="ASSUX">
+<option value="AUGER">
+<option value="AUGUSTO DE ARAÚJO CAMPOS NETO">
+<option value="AURIVERDE">
+<option value="AURIVERDE COOP">
+<option value="AURORA COOP">
+<option value="AUSTER">
+<option value="AVENORTE">
+<option value="AVICOLA PATO BRANCO">
+<option value="BAUKE DIJKSTRA">
+<option value="BERCAMP">
+<option value="BIASOLI">
+<option value="BILISKO">
+<option value="BIOCEPA">
+<option value="BIOFARM">
+<option value="BIOLAB AVERT">
+<option value="BIOQUIMA">
+<option value="BIOTRON">
+<option value="BMG">
+<option value="BOITEL JBS">
+<option value="BOLZANI">
+<option value="BOM JESUS COOP.">
+<option value="BOM NEGÓCIO">
+<option value="BRASFEED">
+<option value="BRAZILIAN PET FOOD">
+<option value="BRF">
+<option value="BRF PET">
+<option value="BRUNO LINHARES BORTOLUZZI">
+<option value="CAMDA COOP">
+<option value="CÂMERA VAREJO ">
+<option value="CAMNPAL">
+<option value="CAMPO RAÇÕES">
+<option value="CAPAL COOP.">
+<option value="CAPTAR AGROBUSINESS">
+<option value="CAPUL COOP">
+<option value="CARA PRETA">
+<option value="CARARA ZOCCHE">
+<option value="CARGILL">
+<option value="CARLOS AUGUSTO DELEZUK">
+<option value="CARMINATTI">
+<option value="CASTROLANDA COOP.">
+<option value="CCPR">
+<option value="CEDAN">
+<option value="CENTRAL NORTE RAÇÕES">
+<option value="CEREAL">
+<option value="CEREALISTA ROSSI">
+<option value="CHÁCARA FLORENTIA">
+<option value="CIALNE">
+<option value="CLAUDIO VAZ DE PAIVA">
+<option value="CMA">
+<option value="COACAM">
+<option value="COACIG">
+<option value="COAGRIL">
+<option value="COAGRO">
+<option value="COAMO">
+<option value="COASC">
+<option value="COASUL">
+<option value="COLACER">
+<option value="COMIGO COOP">
+<option value="COMPLEM COOP">
+<option value="CONDOMÍNIO RURAL CANTO PORTO">
+<option value="CONNAN">
+<option value="COOLAN">
+<option value="COOMAT">
+<option value="COOPER AMAUC ">
+<option value="COOPERALFA">
+<option value="COOPERCAMPOS">
+<option value="COOPERCITRUS">
+<option value="COOPERITAIPU">
+<option value="COOPERMOTA">
+<option value="COOPEROESTE">
+<option value="COOPERPLAN">
+<option value="COOPERVIL">
+<option value="COPACOL">
+<option value="COPAGRIL">
+<option value="COPAVEL">
+<option value="COPERDIA">
+<option value="COPERPHÓS NUTRIÇÃO ANIMAL">
+<option value="COPROSSEL">
+<option value="COPVALE">
+<option value="COROAVES">
+<option value="COTREVALE">
+<option value="COTRIBÁ">
+<option value="COTRIBÁ COOP">
+<option value="COTRICAMPO">
+<option value="COTRIJAL">
+<option value="COTRIJAL COOP">
+<option value="COTRIMAIO">
+<option value="COTRIPAL">
+<option value="COTRIROSA">
+<option value="COTRISAL">
+<option value="COTRISUL">
+<option value="CRAVIL">
+<option value="CRAVIL COOP">
+<option value="CRISTIAN TOLAZZI">
+<option value="DÁLIA">
+<option value="DALPET">
+<option value="DAMES">
+<option value="DANES">
+<option value="DANIEL ANDRÉ DA SILVA">
+<option value="DARCI , MARCIO E VILSON LEWE">
+<option value="DARCI SIVIERO">
+<option value="DAVID NOITE">
+<option value="DE HEUS">
+<option value="DOG CHONI">
+<option value="DOG STAR">
+<option value="DOUWE JANTINUS GROENWOLD">
+<option value="DR. STANLEY">
+<option value="DREAM DOG">
+<option value="DSM">
+<option value="EBURNEO E MONTEIRO">
+<option value="EDUARDO GRACIANO PEREIRA">
+<option value="ERASMO CARLOS RABELO">
+<option value="EXTRUTECNICA CENTRO DE TECNOLOGIA EM EXTRUSÃO EIRELI">
+<option value="FABIANA SOARES FERREIRA">
+<option value="FABIO PEDRO FABRETTI">
+<option value="FACHOLI">
+<option value="FAIRFEED">
+<option value="FAMILIA MAZZER CARVALHO">
+<option value="FARMINA ">
+<option value="FAROGEL">
+<option value="FAZENDA COLORADO">
+<option value="FAZENDA LEITE VERDE">
+<option value="FAZENDA VALE DO JOTUVA">
+<option value="FECOAGRO">
+<option value="FERNANDA KRIEGER BACELAR PEREIRA">
+<option value="FERNANDO AFONSO MACHADO">
+<option value="FERNANDO E GERMANO STEDILE">
+<option value="FERNANDO SLEUTJES">
+<option value="FLAVIO LUCIO DE ALMEIDA">
+<option value="FORTE">
+<option value="FORTUNA NUTRIÇÃO ANIMAL">
+<option value="FOSFERPET">
+<option value="FOSPLAN">
+<option value="FRANCISCO BASTOS DE MIRANDA">
+<option value="FRANGOS PIOVESAN">
+<option value="FRIELLA">
+<option value="FRIGOESTRELA">
+<option value="FRISIA COOP">
+<option value="FRIVATTI">
+<option value="FUGA COUROS">
+<option value="FVO">
+<option value="GENERAL TREATS">
+<option value="GERADO FERNANDES DE SANTANA">
+<option value="GILBERTO ZANCHI">
+<option value="GIONGO E HAMMEL AGROPECUÁRIA LTDA">
+<option value="GIRÃO AGRONEGOCIOS SIA">
+<option value="GIVALDO ALVES DE OLIVEIRA">
+<option value="GLOBOAVES">
+<option value="GMP">
+<option value="GOODNUT">
+<option value="GPR NUTRIÇÃO ANIMAL">
+<option value="GPR NUTRIÇÃO ANIMAL | RAÇÕES VALLE">
+<option value="GRAN PREMIATTA">
+<option value="GRANDE LAGO">
+<option value="GRANFINO">
+<option value="GRANJA ECONOMICA">
+<option value="GRANJA HACH">
+<option value="GRANJA MANTIQUEIRA">
+<option value="GRANJA REAL">
+<option value="GRANJAS 4 IRMÃOS SA">
+<option value="GRANVITTA">
+<option value="GRATIA YLOCILOAGRICULTURA E PECUÁRIA LTDA">
+<option value="GRUPO FARIAS">
+<option value="GRUPO FRISA">
+<option value="GRUPO KIWI">
+<option value="GUABI">
+<option value="HANA">
+<option value="HANS JAN GROENWOLD">
+<option value="HEBERT LEVER JOSÉ DO COUTO">
+<option value="HELENO HENRIQUE SILVA">
+<option value="HERMANN PAULO HOFFMANN">
+<option value="HÚGUETTE EFILIENNE FRANÇOISE COLLIN DE NORONHA GUARANI">
+<option value="IMBRAMIL">
+<option value="INCOFAP PET">
+<option value="INPROVETER">
+<option value="INSALTEC">
+<option value="INTEGRADA">
+<option value="INTEGRAL MIX ALIMENTOS">
+<option value="IRMÃOS STROBEL SIA">
+<option value="ITAMAR DUTRA PEREIRA DE RESENDE">
+<option value="IVAN RIBEIRO PEREIRA">
+<option value="IVANIR MARTELLI">
+<option value="IVANIR RODRIGUES FERREIRA">
+<option value="JACCO ARNOUD">
+<option value="JAGUAFRANGOS">
+<option value="JANDIR BOMBARDELLI">
+<option value="JANWILEM E MARIKA SALOMONS">
+<option value="JBS">
+<option value="JBS SEARA">
+<option value="JEOVÁ BARROS DE ALMEIDA">
+<option value="JOÃO CARLOS SAAD">
+<option value="JOÃO VANDER">
+<option value="JOAO ZANARDO">
+<option value="JOHAN WILLEM DYKINGA, HENRIQUE DYKINGA">
+<option value="JOSÉ GERALDO DE LIMA">
+<option value="JOSÉ GOUVEIA FRANCO NETO">
+<option value="JOSÉ HENRIQUE PEREIRA">
+<option value="JOSE RENATO CHIARI">
+<option value="JULIO ANDRE DE OLIVEIRA">
+<option value="JUVENAL PINTO DA ROCHA">
+<option value="KELCO">
+<option value="KEMIN PALATABILIZANTES">
+<option value="KERA">
+<option value="KODYAK NUTRIÇÃO ANIMAL">
+<option value="KONIG">
+<option value="LÁCTEOS VACARIA LTDA">
+<option value="LANGUIRU">
+<option value="LAR">
+<option value="LAVIZOO">
+<option value="LF PEC">
+<option value="LOUIS BAUDRAZ">
+<option value="LUCAS RABBERS">
+<option value="LUIZ ALEXANDRE DE AVELAR">
+<option value="LUIZ CARLOS FIGUEIREDO">
+<option value="LUIZ SMANIOTTO">
+<option value="LUOPET">
+<option value="LUPUS">
+<option value="LUTZ VIANA RODRIGUES JÚNIOR">
+<option value="MAARTEN ZEGWAARD">
+<option value="MACAU">
+<option value="MAIS FRANGO">
+<option value="MANTIQUEIRA">
+<option value="MARCELO CANDITTO M. CARVALHO">
+<option value="MARCELO MARTINS E OUTROS">
+<option value="MARCELO NUNES SIQUEIRA">
+<option value="MÁRCIO FLAVIO PENIDO OLIVEIRA">
+<option value="MÁRCIO RIBEIRO PINTO">
+<option value="MARCOS EPP">
+<option value="MÁRIO DA SILVEIRA TEIXEIRA JÚNIOR">
+<option value="MARIO DE ARAUJO BARBOSA">
+<option value="MARIO SOSSE FILHO E OUTROS">
+<option value="MARIOZINATO SANTOS E FAMILIA">
+<option value="MARIUS CORNÉLIO BRONKHORST">
+<option value="MARS">
+<option value="MARTINELLI">
+<option value="MARTINS AGRO LTDA">
+<option value="MATSUDA">
+<option value="MATSUDA PETS">
+<option value="MAURICIO SILVEIRA COELHO">
+<option value="MAURICIO VICENTE DE CASTRO GREIDANUS">
+<option value="MAURILIODE SOUZA SIQUEIRA">
+<option value="MAURO ANTONIO COSTA DE ARAUJO">
+<option value="MAURO BERALDO OUTROS (SÉRGIO P.B.OUTROS)">
+<option value="MAURO MIRANDA SOARES">
+<option value="MAXIMUS">
+<option value="MCASSAB">
+<option value="MEGAZOO">
+<option value="MEGGIES">
+<option value="MELKSTAD AGROPECUÁRIA LTDA">
+<option value="MFG MARFRIG">
+<option value="MIGPLUS COOP">
+<option value="MILTON BECKER">
+<option value="MINAS NUTRI">
+<option value="MINERPHOS">
+<option value="MINERSAL">
+<option value="MINERTHAL">
+<option value="MJ NUTRIÇÃO ANIMAL">
+<option value="MOAGEIRA">
+<option value="MOIZES E LUCIANO LEMOS">
+<option value="MORAES ALIMENTOS">
+<option value="MORGANA ALIMENTOS ">
+<option value="MOZZAGRO">
+<option value="MULTITRATO">
+<option value="NANCI, DIEGOE VINICIUS DIJKSTRA">
+<option value="NATURAL FOR PETS">
+<option value="NEIVA DE LURDES RIGON ACATROLLI">
+<option value="NELSON JOSÉ KONZEN">
+<option value="NESTLE PURINA ">
+<option value="NEUNUTRA NUTRIÇÃO E SAÚDE ANIMAL">
+<option value="NEW PET">
+<option value="NILSON SILVEIRA PRADO CARVALHO">
+<option value="NILVA THEREZINHA RANDON">
+<option value="NOVA ZELÂNDIA AGROPECUÁRIA">
+<option value="NUCTRAMIX">
+<option value="NUTRALI">
+<option value="NUTRANE">
+<option value="NUTRATTA">
+<option value="NUTREPAMPA">
+<option value="NUTRIBARRA">
+<option value="NUTRIBIO">
+<option value="NUTRICON">
+<option value="NUTRIDANI">
+<option value="NUTRIDEAL">
+<option value="NUTRIFRANGO">
+<option value="NUTRIMARQUES">
+<option value="NUTRIMAX">
+<option value="NUTRIMIX">
+<option value="NUTRINORTE">
+<option value="NUTRIPEC">
+<option value="NUTRIPHOS">
+<option value="NUTRIPURA">
+<option value="NUTRIRAMA">
+<option value="NUTRIRE">
+<option value="NUTRITOP">
+<option value="NUTRIVALE">
+<option value="NUTRIVANZA">
+<option value="NUTRIVITAL">
+<option value="NUTROPICA">
+<option value="NUTTRIA">
+<option value="O BUGIO">
+<option value="ORGANNACT">
+<option value="OROSTRATO OLAVO SILVA BARBOSA - ESPÓLIO">
+<option value="OSANAN PEREIRA CAIXETA">
+<option value="OVÍDIO SOARES">
+<option value="PABLO BORG E ROGÉRIO BORG">
+<option value="PALMALI">
+<option value="PAMPLONA">
+<option value="PANELAÇO PET">
+<option value="PATRÍCIA KOMPIER">
+<option value="PAULO EMIIO RODRIGUES DO AMARAL">
+<option value="PAULO GERALDO HONÓRIO PEREIRA">
+<option value="PAULO ROBERTO VIADANNA E OUTROS">
+<option value="PAULOCESARCAU">
+<option value="PDA ">
+<option value="PECUÁRIA NUTRIÇÃO ANIMAL">
+<option value="PECUS">
+<option value="PEDIGREE">
+<option value="PEDRO LUIZ NUNES">
+<option value="PET DELICIA">
+<option value="PET DOG">
+<option value="PET FOOD SOLUTION">
+<option value="PLANUTRE ">
+<option value="PLENA">
+<option value="PLUMA">
+<option value="PNI NUTRIÇÃO ANIMAL ">
+<option value="POLIDORO JOAQUIM DE FARIA">
+<option value="POLINUTRI">
+<option value="PONTO ALTO">
+<option value="POYTARA">
+<option value="PRADO NUTRIÇÃO ANIMAL">
+<option value="PREMIER PET">
+<option value="PREMIX">
+<option value="PRIMATO">
+<option value="PRIMOR">
+<option value="PRODUMIX">
+<option value="PROLINE">
+<option value="PROVEMIX">
+<option value="PURO TRATO">
+<option value="QUALY">
+<option value="QUEIROZ DE QUEIROZ">
+<option value="QUIMTIA">
+<option value="RAÇÕES BOM TEMPO">
+<option value="RAÇÕES CENTRO">
+<option value="RAÇÕES COOPAC">
+<option value="RAÇÕES NORTÃO">
+<option value="RAÇÕES PASTRE">
+<option value="RAÇÕES PLANALTO">
+<option value="RAÇÕES SALETE ">
+<option value="RAÇÕES SERTANEJA">
+<option value="RAÇÕES SERTANEJA ">
+<option value="RAÇÕES SORRISO">
+<option value="RADAR MIX NUTRIÇÃO ANIMAL">
+<option value="RAFAEL ALERICO">
+<option value="RAIMUNDO EVERARDO VASCONCELOS">
+<option value="RAINHA DA PAZ">
+<option value="RAMINELLI PET FOOD RAÇÕES LTDA.">
+<option value="RAMIZ RIBEIRO JUNQUEIRA">
+<option value="RAPHAEL CORNELIS HOOGERHEIDE">
+<option value="RAYQUIMICA">
+<option value="REAL BEEF">
+<option value="REAL H">
+<option value="REBANHO">
+<option value="REINALDO DE BOER">
+<option value="RENATO MAURÍCIO DE PAULA">
+<option value="RENATO PASQUALLI">
+<option value="RENATO RAPPA">
+<option value="RICO">
+<option value="ROBERTA BERTIN BARROS">
+<option value="ROBERTO BARBOZA">
+<option value="RODRIGO JEAN DE BOER">
+<option value="ROELOF PETTER">
+<option value="ROSSI">
+<option value="ROYAL CANIN">
+<option value="RUMO">
+<option value="SALLUS">
+<option value="SANSAL">
+<option value="SANTA CLARA">
+<option value="SCARPIM ALIMENTOS LTDA">
+<option value="SEARA PET">
+<option value="SEKITA AGRONEGÓCIOS">
+<option value="SELECTA">
+<option value="SIFRA NUTRIÇÃO ANIMAL ">
+<option value="SÍLVIO DE CASTRO">
+<option value="SMART FOODS">
+<option value="SOLITO">
+<option value="SOLUTION PET">
+<option value="SOMA">
+<option value="SOMAVE">
+<option value="SPECIAL DOG">
+<option value="SPF">
+<option value="SUPRAPET">
+<option value="SUPREMAX NUTRIÇÃO ANIMAL">
+<option value="TACTO">
+<option value="TARCISIO FRANCO DO AMARAL">
+<option value="TECNOBEEF">
+<option value="TECSUI">
+<option value="TECTRON">
+<option value="TECTRON IMP.EXP.PROD. VETERINÁRIOS">
+<option value="TERRA SEMEN">
+<option value="TIMAC AGRO">
+<option value="TOPNUTRI">
+<option value="TOTALMIX">
+<option value="TROUW NUTRITION">
+<option value="ULTRA ALIMENTOS">
+<option value="UNAI COOP">
+<option value="UNIÃO NUTRIÇÃO ANIMAL">
+<option value="VACCINAR">
+<option value="VALDERICIO SOUZA DANTAS">
+<option value="VALE RAÇÕES">
+<option value="VALTER LUIZ DRIEMEYER">
+<option value="VB ALIMENTOS">
+<option value="VET INOVA ">
+<option value="VETNIL">
+<option value="VETSCIENCE">
+<option value="VIBRA">
+<option value="VILOMIX">
+<option value="VISTA ALEGRE (BETTER BEEF)">
+<option value="VITAL NUTRITION">
+<option value="VITAMINAS">
+<option value="VITAPET">
+<option value="VITASAL">
+<option value="WALDIR ARSEGO">
+<option value="WESLLIANE MARIA RORIZ NEULS">
+<option value="WETCO">
+<option value="WILLIAM FERDINAND VAN DER GOOT">
+<option value="WILLIAM VRIESMAN SOBRINHK">
+<option value="WITMARSUM COOP">
+<option value="XAPETUBA AGROPECUIRIA">
+<option value="YABUTA">
+<option value="YOSHIKAWA">
+<option value="ZANCHETTA">
+<option value="ZITO FERNANDO LUNARDI">
+<option value="ZOOBRASIL">
+<option value="ZOOFLORA">
+<option value="ZOOMIX">
+<option value="ZOOTEKNA">
+
+
+</datalist>
+
+<label>Fase do Funil</label>
+
+<select id="fase">
+
+<option>Cadastro de lead</option>
+<option>Visita ao técnico especialista</option>
+<option>Envio de documentação dos produtos para o cliente</option>
+<option>Cadastro simplificado SAP</option>
+<option>Envio de amostras para o cliente</option>
+<option>Testes e homologações</option>
+<option>Visita ao time de compras</option>
+<option>Orçamentos e BIDs</option>
+<option>Teste de Campo</option>
+<option>Cadastro Completo</option>
+<option>Pedido de Vendas</option>
+<option>Pós Vendas</option>
+
+</select>
+
+<label>Situação</label>
+
+<select id="situacao">
+
+<option>Em Andamento</option>
+<option>Finalizado</option>
+
+</select>
+
+<label>Data</label>
+
+<input type="date" id="data">
+
+<label>Observações</label>
+
+<textarea id="obs" maxlength="500" placeholder="Máximo 500 caracteres"></textarea>
+
+<button onclick="enviar()">Enviar Atualização</button>
+
+</div>
+
+<script>
+
+function enviar(){
+
+const url = "https://script.google.com/macros/s/AKfycbxXNhGOVU7Eto8B2MxLx1vb93I4D86Vmc93_l5fdvP7xhJ1A50w9g69Px6xiEBRS2PmgA/exec";
+
+const dados = {
+
+gerente:document.getElementById("gerente").value,
+
+lead:document.getElementById("lead").value,
+
+fase:document.getElementById("fase").value,
+
+situacao:document.getElementById("situacao").value,
+
+data:document.getElementById("data").value,
+
+observacao:document.getElementById("obs").value
+
+};
+
+fetch(url,{
+
+method:"POST",
+
+body:JSON.stringify(dados)
+
+})
+
+.then(res=>res.json())
+
+.then(resposta=>{
+
+alert("Atualização enviada com sucesso!");
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>
