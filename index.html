@@ -702,10 +702,15 @@ body:JSON.stringify(dados)
 })
 
 .then(res=>res.json())
-
 .then(resposta=>{
 
 alert("Atualização enviada com sucesso!");
+
+document.getElementById("lead").value = "";
+document.getElementById("fase").selectedIndex = 0;
+document.getElementById("situacao").selectedIndex = 0;
+document.getElementById("data").value = "";
+document.getElementById("obs").value = "";
 
 });
 
@@ -714,5 +719,6 @@ alert("Atualização enviada com sucesso!");
 </script>
 
 </body>
+
 
 </html>
